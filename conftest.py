@@ -11,7 +11,7 @@ def browser(request):
     options = webdriver.ChromeOptions()
     options.add_argument(f"lang={language}")
     print(f"\nStarting browser with language = {language}")
-    browser = webdriver.Chrome(chrome_options=options)
+    browser = webdriver.Chrome(options=options)
     yield browser
     print("\nquit browser..")
     browser.quit()
